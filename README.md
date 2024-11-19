@@ -1,5 +1,5 @@
 # Buổi 1
-#### Bài 1: (Liệt kê số chính phương) Nhập số nguyên dương n (n>0). Liệt kê n số chính
+### Bài 1: (Liệt kê số chính phương) Nhập số nguyên dương n (n>0). Liệt kê n số chính
 phương đầu tiên.
 Ví dụ:
 Hay nhap so nguyen duong: 5. 5 so chinh phuong dau tien: 4 9 16 25 36
