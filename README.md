@@ -2,8 +2,7 @@
 #### Bài 1: (Liệt kê số chính phương) Nhập số nguyên dương n (n>0). Liệt kê n số chính
 phương đầu tiên.
 Ví dụ:
-Hay nhap so nguyen duong: 5
-5 so chinh phuong dau tien: 4 9 16 25 36
+Hay nhap so nguyen duong: 5. 5 so chinh phuong dau tien: 4 9 16 25 36
 ```c
 #include<iostream>
 #include<cmath>
@@ -170,6 +169,55 @@ Xuất lên màn hình các số nguyên tố thuộc đoạn từ 1 đến k
 Xuất k số nguyên tố đầu tiên
 Ví dụ: Nhap 8, Xuat 8 khong phai so nguyen to
 ```c
+#include <iostream>
+
+using namespace std;
+
+int primes[10000001];
+
+void sievePrime() {
+  //coi tat ca so deu la so nguyen to
+  //primes [i] = 1; la so nt
+  //primes [i] = 0; khong la so nt
+  for (int i = 0; i <= 1000000; i++) {
+    primes[i] = 1;
+  }
+  primes[0] = primes[1] = 0;
+  for (int i = 2; i <= 1000; i++) {
+    //neu i la so nt 
+    if (primes[i]) {
+      //duyet cac boi cua i va cho la 0
+      for (int j = i*i; j <= 1000000; j+=i) {
+        primes[j] = 0; // j khong con la so nt
+      }
+    }
+  }
+}
+
+int main() {
+  sievePrime();
+  int n;
+  cin >> n;
+
+  if (primes[n]) cout << n << " la so nguyen to";
+  else cout << n << " khong phai la so nguyen to";
+
+  cout << "\nCac so nguyen to tu 1 - " << n << ": ";
+  for (int i = 0; i <= n; i++) {
+    if (primes[i]) cout << i << " ";
+  }
+
+  cout << endl << n << " so dau tien la: ";
+  int count = 0;
+  for (int i = 0; i <= 1000000; i++) {
+    if (primes[i]) {
+      cout << i << " ";
+      count++;
+    }
+    if(count == n) break;
+  }
+  return 0;
+}
 ```
 
 
