@@ -168,6 +168,8 @@ Nhập vào số nguyên k, cho biết k có phải số nguyên tố không?
 Xuất lên màn hình các số nguyên tố thuộc đoạn từ 1 đến k
 Xuất k số nguyên tố đầu tiên
 Ví dụ: Nhap 8, Xuat 8 khong phai so nguyen to
+Cac so nguyen to tu 1-8: 2 3 5 7
+8 so nguyen to dau tien la: 2 3 5 7 11 13 17 19
 ```c
 #include <iostream>
 
